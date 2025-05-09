@@ -25,3 +25,10 @@ closeModalButton.addEventListener('click', closeModalWindow);
 closeModalButton.addEventListener('touchstart', closeModalWindow);
 overlayBackground.addEventListener('click', closeModalWindow);
 overlayBackground.addEventListener('touchstart', closeModalWindow);
+
+// Closing the modal window on pressing Escape key
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape' && !modalWindow.classList.contains('hidden')) {
+    closeModalWindow();
+  }
+});
