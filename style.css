@@ -83,3 +83,14 @@ p {
   backdrop-filter: blur(3px);
   z-index: 5;
 }
+
+/* Responsive design */
+@media (max-width: 734px) {
+  body {
+    flex-direction: column;
+  }
+
+  .show-modal {
+    margin: 0 auto 2rem auto;
+  }
+}
