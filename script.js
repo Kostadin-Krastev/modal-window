@@ -5,11 +5,16 @@ const overlayBackground = document.querySelector('.overlay');
 const showModalButton = document.querySelectorAll('.show-modal');
 const closeModalButton = document.querySelector('.close-modal');
 
-// Opaning the modal window when showModalButton is clicked
+// Opening the modal window when showModalButton is clicked
 for (let i = 0; i < showModalButton.length; i++) {
   showModalButton[i].addEventListener('click', function () {
-    console.log('button is clicked');
     modalWindow.classList.remove('hidden');
     overlayBackground.classList.remove('hidden');
   });
 }
+
+// Closing the modal window when the X 'closeModalButton' button is clicked
+closeModalButton.addEventListener('click', function () {
+  modalWindow.classList.add('hidden');
+  overlayBackground.classList.add('hidden');
+});
